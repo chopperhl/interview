@@ -1,0 +1,15 @@
+# Handler机制
+
+Handler机制三大关键角色：Handler，Looper，MessageQueue。
+
+其中MessageQueue是Looper内部的一个对象，MessageQueue和Looper每个线程有且只有一个，而Handler是可以有很多个的。他们的工作流程是：
+
+用户使用线程的Looper构建Handler之后
+
+通过Handler的send和post方法发送消息
+消息会加入到MessageQueue中，等待Looper获取处理
+Looper会不断地从MessageQueue中获取Message然后交付给对应的Handler处理
+
+一般我们在Handler的handleMessage中处理消息就可以了
+
+Handler 持有looper looper 持有messageQueue。
