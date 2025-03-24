@@ -1,6 +1,6 @@
 # Handler机制
 
-Handler机制三大关键角色：Handler，Looper，MessageQueue,Message。
+Handler机制四大关键角色：Handler，Looper，MessageQueue,Message。
 
 其中MessageQueue是Looper内部的一个对象，MessageQueue和Looper每个线程有且只有一个，而Handler是可以有很多个的。他们的工作流程是：
 
